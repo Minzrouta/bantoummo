@@ -1,0 +1,39 @@
+# --- Unity ---
+unity-client/[Ll]ibrary/
+unity-client/[Tt]emp/
+unity-client/[Oo]bj/
+unity-client/[Bb]uild*/
+unity-client/[Ll]ogs/
+unity-client/[Mm]emoryCaptures/
+unity-client/.vs/
+unity-client/.idea/
+unity-client/*.csproj
+unity-client/*.sln
+unity-client/*.user
+unity-client/.vscode/
+unity-client/.DS_Store
+
+# --- Node.js (bot + backend) ---
+**/node_modules/
+**/.env
+**/.env.*
+**/dist/
+**/build/
+**/logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- JetBrains Rider ---
+.idea/
+*.sln.iml
+
+# --- OS stuff ---
+.DS_Store
+Thumbs.db
+
+# --- VSCode ---
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
