@@ -1,21 +1,14 @@
 const express = require('express');
-const { Pool } = require('pg');
+const pool = require('./db');
+
 const app = express();
 const port = 3000;
 
-require('dotenv').config({ path: './../.env' });
-
-
-// Créer une instance du Pool PostgreSQL avec les variables d'environnement
-const pool = new Pool({
-    user: process.env.DB_USER,
-    host: process.env.DB_HOST,
-    database: process.env.DB_NAME,
-    password: process.env.DB_PASSWORD,
-    port: process.env.DB_PORT,
+app.listen(port, () => {
+  console.log(`Serveur backend lancé sur http://localhost:${port}`);
 });
 
-// Exemple de route
+
 app.get('/player/:id', async (req, res) => {
   try {
     const { id } = req.params;
@@ -27,6 +20,3 @@ app.get('/player/:id', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Serveur backend lancé sur http://localhost:${port}`);
-});
